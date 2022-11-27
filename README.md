@@ -1,1 +1,1 @@
-# Bittrex
+# Bittrex API

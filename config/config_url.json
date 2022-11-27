@@ -1,0 +1,2 @@
+{"all_summary": "https://api.bittrex.com/v3/markets/summaries",
+"specific_summary": "https://api.bittrex.com/v3/markets/{}/summary"}

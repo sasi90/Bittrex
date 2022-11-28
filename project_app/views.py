@@ -6,8 +6,8 @@ from logger import trace, exc
 
 ROOT = os.getcwd()
 
-with open(os.path.join(ROOT + '/config/config_url.json'), 'r+') as js:
-    js_url = json.dumps(js.read())
+# with open(os.path.join(ROOT + '/config/config_url.json'), 'r+') as js:
+#     js_url = json.dumps(js.read())
 
 
 class BITTREX_V3:

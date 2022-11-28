@@ -12,6 +12,9 @@ app.secret_key = 'tIZs2IzxoCTCd0_SkJK4fz7gRNQ'.encode('utf-8')
 
 @auth.verify_password
 def authenticate(username, password):
+    """
+    Authenticating user credential
+    """
     try:
         if username and password:
             auth_user, auth_pass = bv3.read_auth_details()
@@ -29,6 +32,9 @@ def authenticate(username, password):
 @app.route('/')
 @auth.login_required
 def login():
+    """
+    This function is used to created user login and to generate user session key
+    """
     try:
         if session['id']:
             trace.info("Login success - Session id created")
@@ -44,6 +50,9 @@ def login():
 
 @app.route('/v3/markets/all_summaries', methods=["GET", "POST"])
 def all_summaries():
+    """
+    This function is used to fetch complete market summary details
+    """
     try:
         if 'token' in request.args:
             token = request.args['token']
@@ -66,6 +75,9 @@ def all_summaries():
 # @project_app.route('v3/markets/<string:market_symbol>/summary', methods=["GET", "POST"])
 @app.route('/v3/markets/individual_summary', methods=["GET", "POST"])
 def individual_summary():
+    """
+        This function is used to fetch specific market summary details
+    """
     try:
         if 'token' in request.args:
             token = request.args['token']

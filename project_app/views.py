@@ -14,6 +14,9 @@ class BITTREX_V3:
 
     @staticmethod
     def read_auth_details():
+        """
+        This function is used to fetch the default user credential from encoded file
+        """
         try:
             with open(os.path.join(ROOT + '/config/auth.srt'), 'r+') as auth:
                 data = auth.read()
@@ -28,6 +31,10 @@ class BITTREX_V3:
 
     @staticmethod
     def collect_all_summaries(request_param):
+        """"
+        This function will scrab the summary details from the "api.bittrex.com" website
+        params: request_param ---> request parameter
+        """
         try:
             if request_param.method == 'GET':
                 trace.info("Collecting the market summaries")
@@ -41,6 +48,10 @@ class BITTREX_V3:
 
     @staticmethod
     def collect_individual_summary(request_param):
+        """"
+        This function will scrab the specific market details from the "api.bittrex.com" website
+        params: request_param ---> request parameter
+        """
         try:
             if request_param.method == 'GET':
                 if 'market_symbol' in request_param.args:

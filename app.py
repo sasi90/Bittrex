@@ -3,7 +3,7 @@ from flask import Flask
 from flask import jsonify, make_response, request, session
 from flask_httpauth import HTTPBasicAuth
 from logger import trace, exc
-from app.views import BITTREX_V3 as bv3
+from project_app.views import BITTREX_V3 as bv3
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
@@ -63,7 +63,7 @@ def all_summaries():
         return make_response(jsonify({'message': 'Internal server Issue:'}), 500)
 
 
-# @app.route('v3/markets/<string:market_symbol>/summary', methods=["GET", "POST"])
+# @project_app.route('v3/markets/<string:market_symbol>/summary', methods=["GET", "POST"])
 @app.route('/v3/markets/individual_summary', methods=["GET", "POST"])
 def individual_summary():
     try:
@@ -86,4 +86,4 @@ def individual_summary():
 
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=True)

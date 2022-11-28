@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "61bffa37-50fe-4fcf-99e9-f2bd5f74041a",
+		"name": "Bittrex_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET_All_summary",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/v3/markets/all_summaries?token=M734ARnzRj59miTyiGWiiUhveYc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v3",
+						"markets",
+						"all_summaries"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "M734ARnzRj59miTyiGWiiUhveYc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Individual_market",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/v3/markets/individual_summary?market_symbol=ltc-btc&token=M734ARnzRj59miTyiGWiiUhveYc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v3",
+						"markets",
+						"individual_summary"
+					],
+					"query": [
+						{
+							"key": "market_symbol",
+							"value": "ltc-btc"
+						},
+						{
+							"key": "token",
+							"value": "M734ARnzRj59miTyiGWiiUhveYc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		}
+	]
+}

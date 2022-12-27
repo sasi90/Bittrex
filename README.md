@@ -6,6 +6,7 @@ site.
 * https://bittrex.github.io/api/v3
 * https://bittrex.github.io/api/v3#tag-Markets 
 >backend directory contains the flask api with simple authentication methods
+
 Usage
 Clone the repo
 ```

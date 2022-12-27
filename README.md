@@ -1,8 +1,7 @@
 # Employee attendance status report
 
 **`INFO`**
->This micro services app is used to handle employee attendance report relating with database (Mysql)
->backend directory contains the flask api with authentication methods
+>This micro services app is used to handle employee attendance report relating with database (Mysql) authentication.
 
 Usage
 Clone the repo

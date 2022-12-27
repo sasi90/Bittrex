@@ -15,9 +15,9 @@ Install the backend related requirements and run the server. The following will 
 pip install -r requirements.txt
 python app.py
 ```
-**API Documentation** postman collection is available in the folder ```api_document```
+**API Documentation**: postman collection is available in the folder ```api_document```
 * For user login use the below default credential and it will return ```token``` as a session key to access further api's
 ```{"URL": "http://127.0.0.1:8000", "username":"hr@gmail.com", "password":"hr@123"}```
 
-**DATABASE** Used ```MYSQL``` relational database for stooring the information.
+**DATABASE**: Used ```MYSQL``` relational database for stooring the information.
 database dumps and Entity relationship diagrams are available in the folder ```dataaccess```
